@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/dashboard}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main-content container-fluid" layout:fragment="content">
+<div class="page-title">
+    <h3>Dashboard</h3>
+    <p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
+</div>
+<section class="section">
+   <h1>Add Categories:</h1>
+
+
+    <form action="/admin/addCategories" method="post" enctype="multipart/form-data">
+        <div>
+            <label>Name:</label>
+            <div>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label>Image</label>
+                <div>
+                    <input type="file" name="image">
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <p th:text="${message}"></p>
+
+</section>
+</div>
+</body>
+</html>

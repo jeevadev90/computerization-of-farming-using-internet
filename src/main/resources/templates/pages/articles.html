@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+<body>
+
+<div class="main-content container-fluid" >
+    <div class="page-title">
+        <h3>Dashboard</h3>
+        <p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
+    </div>
+    <section class="section">
+        <h1>Add articles:</h1>
+
+
+        <form action="/admin/addArticles" method="post" enctype="multipart/form-data">
+            <div th:if="${param.error}" class="alert alert-error" style=" display: flex; justify-content: center; color: red;">
+                Invalid data
+            </div>
+            <div>
+                <label>Title:</label>
+                <div>
+                    <input type="text" name="title">
+                </div>
+            </div>
+            <div>
+                <label>Image</label>
+                <div>
+                    <input type="file" name="images">
+                </div>
+            </div>
+            <div>
+                <label>Description</label>
+                <div>
+                    <textarea id="summernote1" name="description"></textarea>
+                </div>
+            </div>
+            <div>
+                <label>Content</label>
+                <div >
+                   <textarea id="summernote" name="content"></textarea>
+                </div>
+
+
+            </div>
+            <div>
+                <label>Type</label>
+                <div>
+                    <input type="text" name="name">
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <p th:text="${message1}"></p>
+        </form>
+    </section>
+</div>
+
+<script>  $(document).ready(function() {
+        $('#summernote').summernote();
+        $('#summernote1').summernote();
+    });
+
+</script>
+</body>
+</html>
