@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
 @Controller
-@CrossOrigin(origins = "http://localhost:3000")
+
 @RequestMapping("/registers")
 public class RegisterController {
 
