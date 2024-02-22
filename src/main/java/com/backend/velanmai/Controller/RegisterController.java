@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
 @Controller
-
+@CrossOrigin(origins = "https://farming-0kkf.onrender.com")
 @RequestMapping("/registers")
 public class RegisterController {
 
