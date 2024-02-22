@@ -20,7 +20,7 @@ import java.io.IOException;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://farming-0kkf.onrender.com")
 @RequestMapping("/users")
 public class UserController {
     @Autowired
