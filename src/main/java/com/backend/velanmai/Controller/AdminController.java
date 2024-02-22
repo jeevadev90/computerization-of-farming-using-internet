@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://farming-0kkf.onrender.com")
 @RequestMapping("/admin")
 public class AdminController {
 
