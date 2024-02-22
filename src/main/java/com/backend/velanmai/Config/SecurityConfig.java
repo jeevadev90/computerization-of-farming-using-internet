@@ -40,8 +40,8 @@ public class SecurityConfig {
     {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(httpRequest ->
-                        httpRequest.requestMatchers("/registers/**").permitAll()
-                                .requestMatchers("/users/**", "/feedback/**", "/comments/**").hasAnyAuthority(Role.USER.name(),Role.ADMIN.name())
+                        httpRequest.requestMatchers("/registers/**", "/feedback/**").permitAll()
+                                .requestMatchers("/users/**", "/comments/**").hasAnyAuthority(Role.USER.name(),Role.ADMIN.name())
                                 .requestMatchers("/admin/**").hasAuthority(Role.ADMIN.name())
                                 .anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults())
