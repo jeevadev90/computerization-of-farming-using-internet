@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://farming-0kkf.onrender.com")
+@CrossOrigin(origins = "https://letsfarming.netlify.app")
 @RequestMapping("/admin")
 public class AdminController {
 
