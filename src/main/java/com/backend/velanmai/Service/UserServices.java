@@ -53,6 +53,7 @@ public class UserServices {
         profileDto.setName(user.getName());
         profileDto.setEmail(user.getEmail());
         profileDto.setImage(user.getImage());
+        profileDto.setRole(user.getRole());
         ApiResponse apiResponse=new ApiResponse();
         apiResponse.setData(profileDto);
         return ResponseEntity.status(apiResponse.getStatus()).body(apiResponse);
@@ -142,7 +143,7 @@ public class UserServices {
         user.setImage(registerDto.getImage());
         userRepository.save(user);
         ApiResponse apiResponse=new ApiResponse();
-        apiResponse.setData("success");
+        apiResponse.setData(user.getImage());
         return ResponseEntity.status(apiResponse.getStatus()).body(apiResponse.getData());
     }
 
