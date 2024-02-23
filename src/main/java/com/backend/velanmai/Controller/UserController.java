@@ -20,7 +20,7 @@ import java.io.IOException;
 
 
 @RestController
-@CrossOrigin(origins = "https://farming-0kkf.onrender.com")
+@CrossOrigin(origins = "https://letsfarming.netlify.app")
 @RequestMapping("/users")
 public class UserController {
     @Autowired
